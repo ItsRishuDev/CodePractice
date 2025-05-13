@@ -1,23 +1,29 @@
 """
-Get day Name
+Check the age of the user
 """
 
 class Solution:
     def getDayName(self):
-        get_age = True
-        while get_age:
-            try:
-                age = int(input("Enter your age : "))
-                if age < 1:
-                    print("Invalid age provided")
-                else:
-                    get_age = False
-            except ValueError:
-                print("Invalid age provided")
-        if age >= 18:
-            print("You are an adult.")
-        else:
-            print("You are not an adult.") 
+        day = int(input("Enter day : "))
+        
+        match day:
+            case 1:
+                return "Monday"
+            case 2:
+                return "Tuesday"
+            case 3:
+                return "Wednesday"
+            case 4:
+                return "Thursday"
+            case 5:
+                return "Friday"
+            case 6:
+                return "Saturday"
+            case 7:
+                return "Sunday"
+            case default:
+                return "Invalid Day"
+
 
 solution_obj = Solution()
-solution_obj.checkAdult()
+print(solution_obj.getDayName())
